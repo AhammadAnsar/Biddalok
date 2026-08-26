@@ -1,0 +1,6 @@
+{
+  "name": "Biddalok",
+  "description": "Biddalok by SoftDows - School & Institution Management Desktop App with Testimonial Generator and Fast Offline Database",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
