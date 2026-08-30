@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8860b" />
+      <stop offset="30%" stop-color="#e6ca65" />
+      <stop offset="50%" stop-color="#ffd700" />
+      <stop offset="70%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+  </defs>
+
+  <rect width="794" height="1123" fill="#faf9f6" />
+  
+  <!-- Outer Gold Double Line -->
+  <rect x="22" y="22" width="750" height="1079" fill="none" stroke="url(#goldgrad)" stroke-width="5" />
+  <rect x="30" y="30" width="734" height="1063" fill="none" stroke="url(#goldgrad)" stroke-width="1.5" />
+  
+  <!-- Inner Ornamental Box -->
+  <rect x="42" y="42" width="710" height="1039" fill="#ffffff" stroke="url(#goldgrad)" stroke-width="2" />
+
+  <!-- Corner Flourish Elements (TL) -->
+  <g transform="translate(42, 42)" stroke="url(#goldgrad)" fill="none" stroke-width="2">
+    <path d="M 0,35 Q 20,20 35,0" />
+    <path d="M 0,45 Q 30,30 45,0" />
+    <circle cx="18" cy="18" r="5" fill="url(#goldgrad)" />
+    <path d="M 0,0 L 25,0 L 0,25 Z" fill="url(#goldgrad)" />
+  </g>
+
+  <!-- TR -->
+  <g transform="translate(752, 42) scale(-1, 1)" stroke="url(#goldgrad)" fill="none" stroke-width="2">
+    <path d="M 0,35 Q 20,20 35,0" />
+    <path d="M 0,45 Q 30,30 45,0" />
+    <circle cx="18" cy="18" r="5" fill="url(#goldgrad)" />
+    <path d="M 0,0 L 25,0 L 0,25 Z" fill="url(#goldgrad)" />
+  </g>
+
+  <!-- BL -->
+  <g transform="translate(42, 1081) scale(1, -1)" stroke="url(#goldgrad)" fill="none" stroke-width="2">
+    <path d="M 0,35 Q 20,20 35,0" />
+    <path d="M 0,45 Q 30,30 45,0" />
+    <circle cx="18" cy="18" r="5" fill="url(#goldgrad)" />
+    <path d="M 0,0 L 25,0 L 0,25 Z" fill="url(#goldgrad)" />
+  </g>
+
+  <!-- BR -->
+  <g transform="translate(752, 1081) scale(-1, -1)" stroke="url(#goldgrad)" fill="none" stroke-width="2">
+    <path d="M 0,35 Q 20,20 35,0" />
+    <path d="M 0,45 Q 30,30 45,0" />
+    <circle cx="18" cy="18" r="5" fill="url(#goldgrad)" />
+    <path d="M 0,0 L 25,0 L 0,25 Z" fill="url(#goldgrad)" />
+  </g>
+</svg>

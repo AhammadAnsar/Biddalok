@@ -1,7 +1,7 @@
 {
   "name": "biddalok",
   "private": true,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Biddalok - School & Institution Management System by SoftDows",
   "author": "Ansar Ahammad (Founder, SoftDows) <ahammadansar75@gmail.com>",
   "homepage": "https://softdows.com/biddalok",
@@ -9,19 +9,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-icons.cjs",
+    "generate-icons": "node scripts/generate-icons.cjs",
     "preview": "vite preview",
     "clean": "rm -rf dist release server.js",
     "lint": "tsc --noEmit",
     "electron:dev": "concurrently \"vite --port=3000\" \"wait-on http-get://localhost:3000 && electron .\"",
-    "electron:build": "vite build && electron-builder",
-    "electron:build:win": "vite build && electron-builder --win nsis portable",
-    "electron:build:dir": "vite build && electron-builder --dir"
+    "build:electron": "npm run build && electron-builder --win nsis portable",
+    "electron:build": "npm run build && electron-builder --win nsis portable",
+    "electron:build:win": "npm run build && electron-builder --win nsis portable",
+    "electron:build:dir": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder --win"
   },
   "build": {
     "appId": "com.softdows.biddalok",
     "productName": "Biddalok by SoftDows",
     "copyright": "Copyright © 2026 SoftDows. Developed by Ansar Ahammad",
+    "icon": "build/icon.ico",
     "directories": {
       "output": "release"
     },
@@ -29,20 +33,27 @@
       "dist/**/*",
       "electron/**/*",
       "public/**/*",
+      "build/**/*",
       "package.json"
     ],
     "win": {
+      "icon": "build/icon.ico",
+      "requestedExecutionLevel": "asInvoker",
+      "legalTrademarks": "Biddalok™ by SoftDows",
+      "verifyUpdateCodeSignature": false,
       "target": [
         {
           "target": "nsis",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         },
         {
           "target": "portable",
           "arch": [
-            "x64"
+            "x64",
+            "ia32"
           ]
         }
       ]
@@ -55,9 +66,10 @@
       "shortcutName": "Biddalok by SoftDows",
       "uninstallDisplayName": "Biddalok by SoftDows",
       "runAfterFinish": true,
-      "perMachine": true,
+      "perMachine": false,
       "deleteAppDataOnUninstall": false,
-      "allowElevation": true
+      "allowElevation": false,
+      "include": "electron/installer.nsh"
     }
   },
   "dependencies": {
@@ -66,6 +78,7 @@
     "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
+    "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "idb-keyval": "^6.3.0",
     "jspdf": "^4.2.1",
@@ -82,6 +95,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
     "autoprefixer": "^10.4.21",
@@ -89,6 +103,7 @@
     "electron": "^43.4.0",
     "electron-builder": "^26.15.3",
     "esbuild": "^0.25.0",
+    "png-to-ico": "^3.0.2",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
