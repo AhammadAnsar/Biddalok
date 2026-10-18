@@ -22,7 +22,8 @@ import {
   Menu,
   X,
   Sun,
-  Moon
+  Moon,
+  Check
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AdSenseBanner } from '../components/ads/AdSenseBanner';
