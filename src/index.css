@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* System Font Variables & Local Fallbacks */
+:root {
+  --font-bengali: 'Kalpurush', 'SolaimanLipi', 'Noto Sans Bengali', 'Hind Siliguri', sans-serif;
+  --font-english: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 100% Offline Local Font Assets (F-19) */
+@font-face {
+  font-family: 'Kalpurush';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('Kalpurush'), local('Kalpurush Regular'), url('/fonts/Kalpurush.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-style: normal;
+  font-weight: 400 700;
+  src: local('SolaimanLipi'), local('SolaimanLipi Normal'), url('/fonts/SolaimanLipi.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Bengali';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans Bengali'), url('/fonts/noto-sans-bengali-400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Bengali';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bengali Bold'), url('/fonts/noto-sans-bengali-700.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter'), url('/fonts/inter-400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Inter SemiBold'), url('/fonts/inter-600.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inter Bold'), url('/fonts/inter-700.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Base typography & rendering using dynamic system fonts */
+html, body {
+  font-family: var(--font-bengali), var(--font-english), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  height: 100%;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Global button and touch target safety */
+button,
+[role="button"],
+a {
+  touch-action: manipulation;
+}
+
+/* Hide scrollbar utility & ensure main content area has no visible vertical scrollbars */
+.no-scrollbar,
+main,
+.main-content-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar,
+main::-webkit-scrollbar,
+.main-content-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+}
+
+/* Custom scrollbars for specific internal data tables / modals where desired */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 4mm;
+  }
+  body, 
+  .print-sheet, 
+  .official-register-root,
+  .register-page-sheet,
+  table, 
+  th, 
+  td, 
+  div, 
+  p, 
+  span, 
+  h1, 
+  h2, 
+  h3,
+  h4 {
+    font-family: var(--font-bengali), var(--font-english), sans-serif !important;
+  }
+  body {
+    overflow: visible !important;
+    background: white !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-sheet {
+    page-break-after: always !important;
+    break-after: page !important;
+    overflow: visible !important;
+  }
+}
+

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="100%" height="100%">
+  <defs>
+    <linearGradient id="parchment" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffef0" />
+      <stop offset="50%" stop-color="#fcf8e3" />
+      <stop offset="100%" stop-color="#f7f1d5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Parchment Base -->
+  <rect width="794" height="1123" fill="url(#parchment)" />
+  
+  <!-- Classic Burgundy Double Frame -->
+  <rect x="22" y="22" width="750" height="1079" fill="none" stroke="#7f1d1d" stroke-width="4" />
+  <rect x="30" y="30" width="734" height="1063" fill="none" stroke="#b45309" stroke-width="1.5" />
+  <rect x="38" y="38" width="718" height="1047" fill="none" stroke="#7f1d1d" stroke-width="1" />
+
+  <!-- Flourish Corner Dots -->
+  <circle cx="50" cy="50" r="4" fill="#7f1d1d" />
+  <circle cx="744" cy="50" r="4" fill="#7f1d1d" />
+  <circle cx="50" cy="1073" r="4" fill="#7f1d1d" />
+  <circle cx="744" cy="1073" r="4" fill="#7f1d1d" />
+</svg>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>বিদ্যালোক — শিক্ষাপ্রতিষ্ঠান ব্যবস্থাপনা ও অটোমেশন প্ল্যাটফর্ম | Biddalok</title>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="m4tV2GXt9Bdc_lqgP0awfckbmTrg9cWYZ5dGv5S47EQ" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="বিদ্যালোক (Biddalok): রাজস্ব খাতভুক্ত বৃত্তি ফরম, CR-80 স্মার্ট আইডি কার্ড, এডমিট কার্ড, গ্রেডিং ফলাফল শিট ও প্রাতিষ্ঠানিক হিসাবরক্ষণ সফটওয়্যার। নির্ভরযোগ্য শিক্ষা ব্যবস্থাপনা।" />
+    <meta name="keywords" content="বিদ্যালোক, Biddalok, school management software, রাজস্ব খাতভুক্ত বৃত্তি ফরম, শিক্ষা প্রতিষ্ঠান সফটওয়্যার, student id card generator, admit card bd, nice trix, softdows" />
+    <meta name="author" content="SoftDows & NiceTrix" />
+    <link rel="canonical" href="https://biddalok.nicetrix.com" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://biddalok.nicetrix.com" />
+    <meta property="og:title" content="বিদ্যালোক — শিক্ষাপ্রতিষ্ঠান ব্যবস্থাপনা ও অটোমেশন প্ল্যাটফর্ম" />
+    <meta property="og:description" content="রাজস্ব খাতভুক্ত বৃত্তি ফরম, CR-80 আইডি কার্ড, এডমিট কার্ড ও রেজাল্ট প্রসেসিং সফটওয়্যার।" />
+    <meta property="og:image" content="https://biddalok.nicetrix.com/icon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="বিদ্যালোক — Biddalok Education Management" />
+    <meta name="twitter:description" content="বাংলাদেশের শিক্ষাপ্রতিষ্ঠানের জন্য আধুনিক, নির্ভরযোগ্য ও নিরাপদ ম্যানেজমেন্ট সফটওয়্যার।" />
+    <meta name="twitter:image" content="https://biddalok.nicetrix.com/icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="alternate icon" type="image/png" href="/icon.png" />
+    <link rel="shortcut icon" href="/icon.ico" />
+
+    <!-- Google Analytics (GA4) with strict Privacy & Data Leak Safeguards -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B4F7HKZX1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7B4F7HKZX1', {
+        'anonymize_ip': true,
+        'allow_google_signals': false,
+        'restricted_data_processing': true
+      });
+    </script>
+
+    <!-- Google AdSense (nicetrix.com network) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6673594317291335"
+         crossorigin="anonymous"></script>
+
+    <script>
+      // Prevent third-party polyfills (like node-fetch or undici) from crashing the app
+      try {
+        const originalFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get: function() { return originalFetch; },
+          set: function(val) { console.warn('Blocked attempt to overwrite window.fetch'); },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {}
+
+      // Safe JSON.parse guard: prevent crashes from unquoted "undefined", "null", or invalid primitives globally
+      try {
+        const _origParse = JSON.parse;
+        JSON.parse = function(text, reviver) {
+          if (text === undefined || text === null || text === 'undefined' || text === 'null') {
+            return null;
+          }
+          return _origParse.call(this, text, reviver);
+        };
+      } catch (e) {}
+
+      // Sanitize corrupted storage keys in localStorage
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          for (let i = window.localStorage.length - 1; i >= 0; i--) {
+            const key = window.localStorage.key(i);
+            if (key) {
+              const val = window.localStorage.getItem(key);
+              if (val === 'undefined' || val === 'null' || val === 'NaN') {
+                window.localStorage.removeItem(key);
+              }
+            }
+          }
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="100%" height="100%">
+  <rect width="794" height="1123" fill="#ffffff" />
+  
+  <!-- Modern Geometric Minimalist Border -->
+  <rect x="25" y="25" width="744" height="1073" fill="none" stroke="#334155" stroke-width="2" />
+  <rect x="33" y="33" width="728" height="1057" fill="none" stroke="#0284c7" stroke-width="1" />
+
+  <!-- Corner Brackets -->
+  <path d="M 20,45 L 20,20 L 45,20" fill="none" stroke="#0284c7" stroke-width="4" />
+  <path d="M 774,45 L 774,20 L 749,20" fill="none" stroke="#0284c7" stroke-width="4" />
+  <path d="M 20,1078 L 20,1103 L 45,1103" fill="none" stroke="#0284c7" stroke-width="4" />
+  <path d="M 774,1078 L 774,1103 L 749,1103" fill="none" stroke="#0284c7" stroke-width="4" />
+</svg>
